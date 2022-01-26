@@ -61,7 +61,7 @@ def test_json_jobsubmitmessage_deserialize(job_type, job_args, job_kwargs,
     assert response__msg == message
 
 
-def test_json_Jobresponsemessage_deserialize(job_type,
+def test_json_jobresponsemessage_deserialize(job_type,
                                              senderid, receiverid):
     """test JSONdeserialize method
     """
