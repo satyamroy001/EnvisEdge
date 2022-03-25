@@ -4,10 +4,11 @@
   <img src="./assets/envisedge-banner-dark.png#gh-light-mode-only" alt="EnvisEdge"/ height="350" width="700">
   <img src="./assets/envisedge-banner-light.png#gh-dark-mode-only" alt="EnvisEdge"/ height="350" width="700">
   <br>
-  Bringing Recommendations to the Edge
+  Envision the Edge like never before...
   <br>
 
 </h1>
+
 <p align="center">
 <a href=""><img src="https://img.shields.io/github/license/NimbleEdge/EnvisEdge?style=plastic" alt="Lisence"></a>
 <a href=""><img src="https://img.shields.io/github/last-commit/NimbleEdge/EnvisEdge?style=plastic" alt="Activity"></a>
@@ -20,16 +21,21 @@
 <a href="https://github.com/NimbleEdge/EnvisEdge/pulse"><img src="./assets/sparkline-banner.png" alt="Sparkline"/ height="50" width="250"></a>
 <br>  
 </p>
+ 
+EnvisEdge allows users to simulate an edge computing environment to test their ideas and models before putting them in place on the edge. It takes care of all the complex stuff such as diversity across operating systems, computation power and communication mediums, allowing you to focus on the idea rather than the setup. 
 
-A one-stop solution to build your recommendation models, train them and, deploy them in a privacy-preserving manner-- right on the users' devices.
+EnvisEdge allows researchers, developers and data scientists to experiment and test their hypotheses, and produce production-ready code without having direct access to the edge devices. Creating a path for global research and growth in the domains of federated learning and edge computing.
 
-EnvisEdge allows you to easily explore new federated learning algorithms and deploy them into production.
 
-The steps to building an awesome recommendation system are:
-1. 🔩 **Standard ML training**: Pick up any ML model and benchmark it using standard settings.
-2. 🎮 **Federated Learning Simulation**: Once you are satisfied with your model, explore a host of FL algorithms with the simulator.
-3. 🏭 **Industrial Deployment**: After all the testing and simulation, deploy easily using NimbleEdge suite
-4. 🚀 **Edge Computing**: Leverage all the benefits of edge computing
+## Key features :star2:  
+
+1. Provides a platform for global or remote teams to run and test their systems/models prior to deployment.
+2. Run, train and test FL algorithms and ML models. 
+3. Can setup environment of your choice with any arbitrary hardware constraints such as RAM, CPU and more. 
+4. Experience Edge on cloud and your devices.
+<br>
+
+
 
 # Repo Structure 🏢
   
@@ -37,6 +43,7 @@ The steps to building an awesome recommendation system are:
 NimbleEdge/EnvisEdge
 ├── CONTRIBUTING.md           <-- Please go through the contributing guidelines before starting 🤓
 ├── README.md                 <-- You are here 📌
+├── datasets                  <-- Sample datasets
 ├── docs                      <-- Tutorials and walkthroughs 🧐
 ├── experiments               <-- Recommendation models used by our services
 └── fedrec                    <-- Whole magic takes place here 😜 
@@ -46,7 +53,10 @@ NimbleEdge/EnvisEdge
       ├── serialization           <-- Message serializers
       └── utilities               <-- Helper modules
 ├── fl_strategies             <-- Federated learning algorithms for our services.
-└── notebooks                 <-- Jupyter Notebook examples
+├── notebooks                 <-- Jupyter Notebook examples
+├── scala-core                <-- Backbone of EnvisEdge
+├── scripts                   <-- Separate DLRM recommender code  
+└── tests                     <-- tests
 ``` 
   
 # QuickStart
@@ -113,12 +123,22 @@ Run tensorboard to view training loss and validation metrics at [localhost:8888]
 ```bash
 tensorboard --logdir $HOME/logs/kaggle_criteo --port 8888
 ```
-# Contribute
+# Demos and Tutorials
+You may find all the EnvisEdge related demos and tutorials [here](https://github.com/NimbleEdge/EnvisEdge/tree/refactor-user-module/docs).
 
-1. Please go through our [CONTRIBUTING](https://github.com/NimbleEdge/EnvisEdge/blob/main/CONTRIBUTING.md) guidelines before starting.
-2. Star, fork, and clone the repo.
-3. Do your work.
-4. Push to your fork.
-5. Submit a PR to NimbleEdge/EnvisEdge
+You may also find the official documentation [here](https://docs.nimbleedge.ai/).
 
-We welcome you to the [Discord](https://nimbleedge.ai/discord) for queries related to the library and contribution in general.
+# Start Contributing
+
+1. Before you begin, please read our [CONTRIBUTOR'S](https://github.com/NimbleEdge/EnvisEdge/blob/main/CONTRIBUTING.md) GUIDELINES.
+2. Introduce yourself in the #introduction channel on [Discord](https://nimbleedge.ai/discord) ( Most of the talks and discussions happen here.)
+3. Look for an open issue that interests you such as [`good first issue`](https://github.com/NimbleEdge/EnvisEdge/labels/good%20first%20issue), [`python`](https://github.com/NimbleEdge/EnvisEdge/labels/python), [`scala`](https://github.com/NimbleEdge/EnvisEdge/labels/scala), [`documentation`](https://github.com/NimbleEdge/EnvisEdge/labels/documentation%20%F0%9F%93%83) and more. Liverage labels feature as shown below
+![Label wise issue search](https://github.com/shaistha24/EnvisEdge/blob/main/assets/issues.gif) 
+4. Star, fork, and clone the repo. 
+5. Get down to business. Do your work.
+6. Push to your fork.
+7. Send a pull request to NimbleEdge/EnvisEdge.
+
+# License
+[Apache License 2.0](https://github.com/NimbleEdge/EnvisEdge/blob/refactor-user-module/LICENSE)
+
