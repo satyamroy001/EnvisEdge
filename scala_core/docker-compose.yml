@@ -15,6 +15,10 @@ services:
       SERVER_IP: 0.0.0.0
       CLUSTER_IP: seed
       CLUSTER_SEED_IP: seed
+    logging:
+      driver: "fluentd"
+      options:
+        tag: seed
 
   node1:
     networks:
@@ -28,7 +32,10 @@ services:
       CLUSTER_PORT: 1600
       CLUSTER_SEED_IP: seed
       CLUSTER_SEED_PORT: 2552
-
+    logging:
+      driver: "fluentd"
+      options:
+        tag: node1
   node2:
     networks:
       - cluster-network
@@ -41,3 +48,7 @@ services:
       CLUSTER_PORT: 1600
       CLUSTER_SEED_IP: seed
       CLUSTER_SEED_PORT: 2552
+    logging:
+      driver: "fluentd"
+      options:
+        tag: node2
