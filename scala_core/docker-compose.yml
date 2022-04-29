@@ -16,9 +16,11 @@ services:
       CLUSTER_IP: seed
       CLUSTER_SEED_IP: seed
     logging:
-      driver: "fluentd"
+      driver: gelf
       options:
-        tag: seed
+        gelf-address: "udp://localhost:12201" # Logstash UDP input port
+        tag: "seed"
+    restart: always
 
   node1:
     networks:
@@ -33,9 +35,11 @@ services:
       CLUSTER_SEED_IP: seed
       CLUSTER_SEED_PORT: 2552
     logging:
-      driver: "fluentd"
+      driver: gelf
       options:
-        tag: node1
+        gelf-address: "udp://localhost:12201" # Logstash UDP input port
+        tag: "node1"
+    restart: always
   node2:
     networks:
       - cluster-network
@@ -49,6 +53,8 @@ services:
       CLUSTER_SEED_IP: seed
       CLUSTER_SEED_PORT: 2552
     logging:
-      driver: "fluentd"
+      driver: gelf
       options:
-        tag: node2
+        gelf-address: "udp://localhost:12201" # Logstash UDP input port
+        tag: "node2"
+    restart: always
