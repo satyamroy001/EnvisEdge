@@ -26,7 +26,7 @@ NimbleEdge Orchestrator is built over
 
 The service itself can be run as a docker container on the main server.
 
-create a virtual environment to install the necessary dependecies. The
+create a virtual environment to install the necessary dependencies. The
 dependencies could simply be installed via
 
 .. code:: bash
