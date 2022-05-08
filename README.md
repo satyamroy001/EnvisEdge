@@ -139,4 +139,3 @@ This project follows the [all-contributors](https://github.com/NimbleEdge/EnvisE
 
 # License
 [Apache License 2.0](https://github.com/NimbleEdge/EnvisEdge/blob/refactor-user-module/LICENSE)
-
