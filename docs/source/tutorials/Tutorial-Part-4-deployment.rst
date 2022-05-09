@@ -7,8 +7,8 @@ FL Deployment
 With the simulations done and benchmark results satisfactory, you may
 want to take things into production.
 
-The best thing about using NimbleEdge simulator is it already checks for
-compatibility and serialization capabilties of the models.
+The best thing about using the NimbleEdge simulator is it already checks for
+compatibility and serialization capabilities of the models.
 
 Let’s see the components needed to deploy the FL cycle.
 
@@ -26,7 +26,7 @@ NimbleEdge Orchestrator is built over
 
 The service itself can be run as a docker container on the main server.
 
-create a virtual environment to install the necessary dependecies. The
+create a virtual environment to install the necessary dependencies. The
 dependencies could simply be installed via
 
 .. code:: bash
@@ -42,7 +42,7 @@ Now the start the orchestrator in a docker container with
 Plan Serialization
 ~~~~~~~~~~~~~~~~~~
 
-We can serializes any torch computation graph into a plan for local
+We can serialize any torch computation graph into a plan for local
 execution. The simulator does this automatically for you.
 
 However, should you choose, you can write your custom methods and
@@ -89,7 +89,7 @@ Setting FL hyper parameters
 We define all the hyper parameters for the orchestrator in the server
 config, and for the workers in the client_config.
 
-These parameters themeselves are serialized and sent to the workers
+These parameters themselves are serialized and sent to the workers
 whenever they begin the FL cycle.
 
 .. code:: python
@@ -107,7 +107,7 @@ whenever they begin the FL cycle.
    }
 
    server_config = {
-       "num_cycles": 30,  # total number of cycles (how many times global model is updated)
+       "num_cycles": 30,  # total number of cycles (how many times the global model is updated)
        "cycle_length": 60*60*24,  # max duration of the training cycle in seconds
        "max_diffs": 1,  # number of diffs to collect before updating global model
        "minimum_upload_speed": 0,
@@ -116,7 +116,7 @@ whenever they begin the FL cycle.
    }
 
 You can also optionally add JWT authentication to protect model files
-being exposed to general public.
+being exposed to the general public.
 
 Connecting to Orchestrator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -154,5 +154,5 @@ available to be downloaded by the workers.
 **On-device Training**
 
 The last step is to connect the user devices with the orchestrator to
-begin Training process. Hop into the `next
+begin the Training process. Hop into the `next
 section <./Tutorial-Part-5-local_training.md>`__ for details.
