@@ -36,33 +36,86 @@ Getting started with EnvisEdge
 
 Update the config files of the model (can be found
 `here <https://github.com/NimbleEdge/EnvisEdge/tree/main/configs>`__)
-you are going to use with logging directory:
+you are going to use as your logging directory:
 
 .. code::
 
    log_dir:
-     PATH: <path to your logging directory>
+     PATH: <path to your desired logging directory>
 
 Download kafka from
 `Here <https://www.apache.org/dyn/closer.cgi?path=/kafka/3.1.0/kafka_2.13-3.1.0.tgz>`__
-👈 and start the kafka server using the following commands
+👈 and follow these next steps to start the kafka server
+
+Create a ``kafka`` directory. This will be the folder where ``kafka`` will be installed:
+
+.. code:: bash
+
+   mkdir ~/kafka 
+
+Then ``cd`` to the directory
+.. code:: bash
+
+   cd ~/kafka
+
+Next, extract and unzip the kafka file archive
+
+.. code:: bash
+
+   tar -xvzf ~/<path>/<to>/<Downloaded>/kafka_2.13-3.1.0.tgz -C ~/kafka
+
+   tar -xvzf ~/Downloads/kafka_2.13-3.1.0.tgz -C ~/kafka  #author's download path
+
+Then ``cd`` back into the directory for the new file folder
+.. code:: bash
+
+   cd ~/kafka_2.13-3.1.0
+
+Optionally, rename the folder by running
+.. code:: bash
+
+   mv kafka_2.13-3.1.0 kafka #run command with sudo if the shell raises permission error
+
+For Mac: You can follow the instructions in this guide to setup Kafka on your Mac environment.
+`Here <https://hevodata.com/learn/install-kafka-on-mac/>`__
+👈
+
+Now, run the following command on your unix (Mac/Linux) environment to run zookeeper
 
 .. code:: bash
 
    bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Then, run this command to start the Kafka environment
+
+.. code:: bash
+
    bin/kafka-server-start.sh config/server.properties
 
-Create kafka topics for the job executor
+Create ``kafka`` topics for the job executor
 
 .. code:: bash
 
    cd scripts
-   $ bash add_topics.sh
+   $ bash create_topics.sh
    Enter path to kafka Directory : <Enter the path to the kafka directory>
    kafka url: <Enter the URL on which kafka is listening e.g if you are running it on localhost it would be 127.0.0.1>
    Creating Topics...
 
-Install the dependencies using virtual environment
+Before installing the dependencies needed for this project
+
+``cd`` back into the `EnvisEdge` project directory
+.. code:: bash
+
+   cd ~/path/to/EnvisEdge
+
+If you don't have the `virtualenv` package, you can run the command below to do the installation before proceeding
+
+.. code:: bash
+
+   pip install virtualenv
+
+Now, install the dependencies using virtual environment
 
 .. code:: bash
 
@@ -70,7 +123,7 @@ Install the dependencies using virtual environment
    cd env
    virtualenv envisedge
    source envisedge/bin/activate
-   pip3 install -r requirements.txt
+   pip3 install -r /path/to/requirements.txt
 
 Download the federated dataset
 
@@ -89,13 +142,13 @@ that will be sent to Python workers for training the model.
 
    python preprocess_data.py --config configs/regression.yml
 
-To start the multiprocessing executor run the following command:
+To start the multiprocessing executor, run the following command:
 
 .. code:: bash
 
    $ python executor.py --config configs/regression.yml
 
-To see how traning is done run the following command:
+To see how traning is done, run the following command:
 
 .. code:: bash
 
