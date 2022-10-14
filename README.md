@@ -63,7 +63,7 @@ NimbleEdge/EnvisEdge
 └── tests                                   <-- tests
 ```
 
-# QuickStart
+# Quickstart
 Update the config files of the model (can be found [here](https://github.com/NimbleEdge/EnvisEdge/tree/main/configs)) you are going to use with logging directory:
 
 ```yml
@@ -87,6 +87,7 @@ Enter path to kafka Directory : <Enter the path to the kafka directory>
 kafka url: <Enter the URL on which kafka is listening e.g if you are running it on localhost it would be 127.0.0.1>
 Creating Topics...
 ```
+## Installation
 Install the dependencies using virtual environment
 ```bash
 mkdir env
@@ -119,16 +120,26 @@ To see how traning is done run the following command:
 ```bash
 $ python tests/integration_tests/integration_test.py --config configs/regression.yml
 ```
-# Demos and Tutorials
-You may find all the EnvisEdge related demos and tutorials [here](https://github.com/NimbleEdge/EnvisEdge/tree/main/docs/source/tutorials).
+# Getting started
+* [Tuitorials : to help you get started with understanding and implementing envisedge](https://github.com/NimbleEdge/EnvisEdge/tree/main/docs/source/tutorials).
 
-You may also find the official documentation [here](https://docs.nimbleedge.ai/).
+# Resources
+* [EnvisEdge.ai](https://docs.nimbleedge.ai/)
+* [Introduction to Python](https://docs.python.org/3/tutorial/)
+* [Introduction to python libraries]()
+* [Introduction to Edge Computing](https://www.coursera.org/lecture/iot-wireless-cloud-computing/5-10-edge-computing-pOK8T)
+* [NimbleEdge Blogs](https://blog.nimbleedge.ai/)
+* [NimbleEdge Twitter](https://twitter.com/nimbleedgeinc?s=11&t=EAZr_ENlCYqBi6qxGz394w)
+* [NimbleEdge Linkedin](https://www.linkedin.com/company/nimbleedge/)
+
+
+
 
 # Start Contributing
 
 1. Before you begin, please read our [CONTRIBUTOR'S](https://github.com/NimbleEdge/EnvisEdge/blob/main/CONTRIBUTING.md) GUIDELINES.
 2. Introduce yourself in the #introduction channel on [Discord](https://nimbleedge.ai/discord) ( Most of the talks and discussions happen here.)
-3. Look for an open issue that interests you such as [`good first issue`](https://github.com/NimbleEdge/EnvisEdge/labels/good%20first%20issue), [`python`](https://github.com/NimbleEdge/EnvisEdge/labels/python), [`scala`](https://github.com/NimbleEdge/EnvisEdge/labels/scala), [`documentation`](https://github.com/NimbleEdge/EnvisEdge/labels/documentation%20%F0%9F%93%83) and more. Liverage labels feature as shown below
+3. Look for an open issue that interests you such as [`good first issue`](https://github.com/NimbleEdge/EnvisEdge/labels/good%20first%20issue), [`python`](https://github.com/NimbleEdge/EnvisEdge/labels/python), [`scala`](https://github.com/NimbleEdge/EnvisEdge/labels/scala), [`documentation`](https://github.com/NimbleEdge/EnvisEdge/labels/documentation%20%F0%9F%93%83) and more. Liverage labels feature as shown below.
 ![Label wise issue search](https://github.com/shaistha24/EnvisEdge/blob/main/assets/issues.gif)
 4. Star, [Fork](https://docs.github.com/en/enterprise-server@3.4/get-started/quickstart/fork-a-repo), and [Clone](https://docs.github.com/en/enterprise-server@3.4/get-started/quickstart/fork-a-repo#cloning-your-forked-repository) the repo.
 5. Get down to business. Do your work.
@@ -137,5 +148,8 @@ You may also find the official documentation [here](https://docs.nimbleedge.ai/)
 
 This project follows the [all-contributors](https://github.com/NimbleEdge/EnvisEdge/blob/main/CONTRIBUTING.md) specification.Contributions of any kind are welcome!!
 
+# FAQ and Other Questions
+You can know more about Nimbleedge on the [about nimbleedge page](https://www.nimbleedge.ai/about-us).If you have question about the code or any general question about the repository or project, please head towards our [discord](https://nimbleedge.ai/discord).
+
 # License
-[Apache License 2.0](https://github.com/NimbleEdge/EnvisEdge/blob/refactor-user-module/LICENSE)
+EnvisEdge has a [Apache License 2.0](https://github.com/NimbleEdge/EnvisEdge/blob/refactor-user-module/LICENSE)
